@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('danhmuc', function (Blueprint $table) {
-            $table->id('MaLoai'); 
-            $table->string('TenLoai');
+        Schema::create('binhluan', function (Blueprint $table) {
+            $table->foreignId('MaKH')->constrained('khachhang', 'MaKH');
+            $table->foreignId('MaSP')->constrained('sanpham', 'MaSP');
+            $table->primary(['MaKH', 'MaSP']);
             $table->timestamps();
         });
     }
@@ -23,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('danhmuc');
+        Schema::dropIfExists('binhluan');
     }
 };

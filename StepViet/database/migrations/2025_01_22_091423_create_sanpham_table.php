@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('TenSP');
             $table->text('MoTa')->nullable();
             $table->decimal('GiaBan', 10, 2);
-            $table->foreignId('DanhMuc')->constrained('danhmuc', 'MaLoai')->cascadeOnDelete();
+            $table->foreignId('DanhMuc')->constrained('danhmuc', 'MaLoai');
             $table->string('Hinh')->nullable();
+            $table->foreignId('MaTH')->constrained('thuonghieu', 'MaTH');
             $table->timestamps();
         });
     }
