@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('MaKH');
             $table->string('TenKH');
             $table->text('DiaChi')->nullable();
-            $table->string('SDT', 20)->nullable();
+            $table->string('SoDienThoai', 20);
             $table->string('Email')->nullable();
             $table->timestamps();
         });

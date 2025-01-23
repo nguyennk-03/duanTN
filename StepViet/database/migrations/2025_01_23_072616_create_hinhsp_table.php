@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('danhmuc', function (Blueprint $table) {
-            $table->id('MaDM');
-            $table->string('TenDM');
-            $table->text('MoTa')->nullable();
+        Schema::create('hinhsp', function (Blueprint $table) {
+            $table->id('MaHinh');
+            $table->unsignedBigInteger('MaSP'); 
+            $table->string('HinhAnh'); 
             $table->timestamps();
+            $table->foreign('MaSP')->references('MaSP')->on('sanpham')->onDelete('cascade');
         });
     }
 
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('danhmuc');
+        Schema::dropIfExists('hinhsp');
     }
 };

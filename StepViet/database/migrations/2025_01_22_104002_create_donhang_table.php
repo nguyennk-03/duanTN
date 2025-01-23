@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('donhang', function (Blueprint $table) {
             $table->id('MaDH');
-            $table->foreignId('MaKH')->constrained('khachhang', 'MaKH');
-            $table->dateTime('NgayDH');
-            $table->string('TrangThai')->nullable();
-            $table->string('PhuongThucTT')->nullable();
-            $table->decimal('TongTien', 15, 2);
+            $table->unsignedBigInteger('MaKH');
+            $table->timestamp('NgayDatHang')->useCurrent();
+            $table->decimal('TongTien', 10, 2);
+            $table->enum('TrangThai', ['Đang xử lý', 'Đã hoàn thành', 'Đã hủy'])->default('Đang xử lý');
             $table->timestamps();
+            $table->foreign('MaKH')->references('MaKH')->on('khachhang')->onDelete('cascade');
         });
     }
 

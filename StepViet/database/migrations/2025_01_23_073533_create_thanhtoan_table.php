@@ -11,17 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('donhangct', function (Blueprint $table) {
-            $table->id('MaCTDH');
+        Schema::create('thanhtoan', function (Blueprint $table) {
+            $table->id('MaTT');
             $table->unsignedBigInteger('MaDH');
-            $table->unsignedBigInteger('MaSP');
-            $table->integer('SoLuong')->unsigned();
-            $table->decimal('DonGia', 10, 2);
-            $table->decimal('ThanhTien', 10, 2);
+            $table->decimal('TongTien', 10, 2);
+            $table->enum('PhuongThucThanToan', ['Thẻ tín dụng', 'paypal', 'Chuyển khoản ngân hàng']);
+            $table->enum('TrangThai', ['Đang Xử Lý', 'Hoàn Thành', 'Thất Bại']);
             $table->timestamps();
+
+            
             $table->foreign('MaDH')->references('MaDH')->on('donhang')->onDelete('cascade');
-            $table->foreign('MaSP')->references('MaSP')->on('sanpham')->onDelete('cascade');
         });
+        
     }
 
     /**
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('donhangct');
+        Schema::dropIfExists('thanhtoan');
     }
 };

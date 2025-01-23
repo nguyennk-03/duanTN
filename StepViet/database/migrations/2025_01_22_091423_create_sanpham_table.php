@@ -16,10 +16,13 @@ return new class extends Migration
             $table->string('TenSP');
             $table->text('MoTa')->nullable();
             $table->decimal('GiaBan', 10, 2);
-            $table->foreignId('DanhMuc')->constrained('danhmuc', 'MaLoai');
-            $table->string('Hinh')->nullable();
-            $table->foreignId('MaTH')->constrained('thuonghieu', 'MaTH');
+            $table->unsignedBigInteger('DanhMuc');
+            $table->unsignedBigInteger('MaTH');
+            $table->integer('SoLuong')->unsigned()->default(0);
+            $table->string('HinhAnh')->nullable(); 
             $table->timestamps();
+            $table->foreign('DanhMuc')->references('MaDM')->on('danhmuc')->onDelete('cascade');
+            $table->foreign('MaTH')->references('MaTH')->on('thuonghieu')->onDelete('cascade');
         });
     }
 
