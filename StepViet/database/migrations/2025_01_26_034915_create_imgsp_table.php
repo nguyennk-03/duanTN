@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kichthuocsp', function (Blueprint $table) {
-            $table->id('MaKT');
-            $table->string('KichThuoc', 10);
+        Schema::create('imgsp', function (Blueprint $table) {
+            $table->id('MaHinh');
+            $table->unsignedBigInteger('MaSP');
+            $table->string('DuongDan', 255);
+            $table->foreign('MaSP')->references('MaSP')->on('sanpham')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kichthuocsp');
+        Schema::dropIfExists('hinhsp');
     }
 };

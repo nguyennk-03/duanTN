@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('danhmuc', function (Blueprint $table) {
-            $table->id('MaDM');
-            $table->string('TenDM');
-            $table->text('MoTa')->nullable();
-            $table->timestamps();
+        Schema::create('khachhang', function (Blueprint $table) {
+            $table->id('MaKH');
+            $table->unsignedBigInteger('MaND')->constrained('nguoidung')->onDelete('cascade');
+            $table->dateTime('NgayDangKy');
+            $table->integer('DiemTichLuy')->default(0);
         });
     }
 
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('danhmuc');
+        Schema::dropIfExists('khachhang');
     }
 };

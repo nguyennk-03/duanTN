@@ -11,12 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mausacsp', function (Blueprint $table) {
-            $table->id('MaMau');
-            $table->string('TenMau', 50);
-            $table->string('MaHex', 7); 
+        Schema::create('magiamgia', function (Blueprint $table) {
+            $table->id('MaGG');
+            $table->string('TenGG');
+            $table->decimal('GiaTri', 10, 2);
+            $table->date('NgayBatDau');
+            $table->date('NgayKetThuc');
             $table->timestamps();
         });
+        
     }
 
     /**
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mausacsp');
+        Schema::dropIfExists('magiamgia');
     }
 };

@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+        Schema::create('kichco_sanpham', function (Blueprint $table) {
+            $table->id('MaSize');
+            $table->unsignedBigInteger('MaSP');
+            $table->string('Size', 10);
+            $table->integer('SoLuong')->default(0);
+            $table->foreign('MaSP')->references('MaSP')->on('sanpham')->onDelete('cascade');   
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('sizesp');
     }
 };

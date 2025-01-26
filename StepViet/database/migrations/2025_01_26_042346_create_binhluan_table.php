@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('donhangct', function (Blueprint $table) {
-            $table->id('MaCTDH');
-            $table->unsignedBigInteger('MaDH');
+        Schema::create('binhluan', function (Blueprint $table) {
+            $table->unsignedBigInteger('MaKH');
             $table->unsignedBigInteger('MaSP');
-            $table->integer('SoLuong')->unsigned();
-            $table->decimal('DonGia', 10, 2);
-            $table->decimal('ThanhTien', 10, 2);
-            $table->timestamps();
-            $table->foreign('MaDH')->references('MaDH')->on('donhang')->onDelete('cascade');
+            $table->text('NoiDung');
+            $table->date('NgayBL');
+            $table->foreign('MaKH')->references('MaKH')->on('khachhang')->onDelete('cascade');
             $table->foreign('MaSP')->references('MaSP')->on('sanpham')->onDelete('cascade');
+            $table->primary(['MaKH', 'MaSP']);
+            $table->timestamps();
         });
+        
     }
 
     /**
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('donhangct');
+        Schema::dropIfExists('binhluan');
     }
 };
