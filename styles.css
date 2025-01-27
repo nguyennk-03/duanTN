@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background: black;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+.menu li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menu li:hover {
+  color: #ff5722;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+
+.icons span {
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icons span:hover {
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Featured Products */
+.featured-products {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #f9f9f9;
+}
+
+.featured-products h2 {
+  font-size: 2.5rem;
+  color: #ff5722;
+  margin-bottom: 2rem;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product {
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+/* Promotion Section */
+.promotion img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 3rem 0;
+  border-radius: 10px;
+}
+
+/* Shop Section */
+.shop-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  padding: 3rem 2rem;
+  background: #fff8f0;
+}
+
+.shop-item {
+  text-align: center;
+}
+
+.shop-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.shop-item img:hover {
+  transform: scale(1.05);
+}
+
+.shop-item p {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ff5722;
+  font-size: 1.1rem;
+}
+
+.share-style {
+  text-align: center;
+  font-weight: bold;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}
+
+.share-style span {
+  color: #ff5722;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+
+  color: black;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.thongtin {
+  display: flex;
+}
+
+.footer-info div {
+  max-width: 200px;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footer-links p:hover {
+  color: #ff5722;
+  cursor: pointer;
+}
+.thongtin {
+  display: flex; /* Sắp xếp các cột thành một hàng */
+  justify-content: space-between; /* Căn các cột đều nhau */
+  background-color: grey; /* Màu nền xám cho toàn bộ section */
+  padding: 20px; /* Khoảng cách xung quanh nội dung */
+}
+
+.thongtin .column {
+  width: 25%; /* Mỗi cột chiếm 25% chiều rộng */
+  padding: 10px; /* Khoảng cách bên trong cột */
+  /* Đường viền xung quanh cột */
+}
+
+.thongtin .grey-column {
+  background-color: #ccc; /* Màu xám đậm hơn cho cột "Thông tin" */
+}
