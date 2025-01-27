@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('MaND')->constrained('nguoidung')->onDelete('cascade');
             $table->dateTime('NgayDangKy');
             $table->integer('DiemTichLuy')->default(0);
+            $table->timestamps();
         });
     }
 

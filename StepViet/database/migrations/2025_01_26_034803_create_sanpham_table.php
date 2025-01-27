@@ -13,18 +13,19 @@ return new class extends Migration
     {
         Schema::create('sanpham', function (Blueprint $table) {
             $table->id('MaSP');
-            $table->string('TenSP', 100);
+            $table->string('TenSP' , 255);
+            $table->string('IMG', 255);
             $table->text('MoTa')->nullable();
             $table->decimal('GiaBan', 10, 2);
             $table->decimal('GiaGiam', 10, 2)->nullable();
             $table->integer('SoLuong')->default(0);
-            $table->unsignedBigInteger('danhmuc');
-            $table->unsignedBigInteger('MaTH');
+            $table->unsignedBigInteger('danhmuc');  
+            $table->unsignedBigInteger('MaTH');     
         
             $table->foreign('danhmuc')->references('MaDM')->on('danhmuc')->onDelete('cascade');
             $table->foreign('MaTH')->references('MaTH')->on('thuonghieu')->onDelete('cascade');
             $table->timestamps();
-        });
+        });        
     }
 
     /**

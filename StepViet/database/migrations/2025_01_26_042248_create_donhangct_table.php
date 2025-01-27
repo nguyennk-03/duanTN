@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('MaDH')->references('MaDH')->on('donhang')->onDelete('cascade');
             $table->foreign('MaSP')->references('MaSP')->on('sanpham')->onDelete('cascade');
             $table->primary(['MaDH', 'MaSP']);
+            $table->timestamps();
         });
     }
 

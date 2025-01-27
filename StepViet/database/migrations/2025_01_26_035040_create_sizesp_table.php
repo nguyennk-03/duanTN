@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kichco_sanpham', function (Blueprint $table) {
+        Schema::create('sizesp', function (Blueprint $table) {
             $table->id('MaSize');
             $table->unsignedBigInteger('MaSP');
             $table->string('Size', 10);

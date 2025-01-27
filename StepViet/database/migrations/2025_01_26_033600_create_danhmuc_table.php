@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('danhmuc', function (Blueprint $table) {
             $table->id('MaDM');
-            $table->string('TenDM');
+            $table->string('TenDM')->unique();
+            $table->timestamps();
         });
     }
 
