@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\ImgSp;
 
-
-class SanPham extends Model{
-    
+class SanPham extends Model
+{
     use HasFactory;
 
     protected $table = 'sanpham';
+    protected $primaryKey = 'MaSP'; // Định nghĩa khóa chính
+    public $timestamps = false; // Nếu không có created_at và updated_at
 
     protected $fillable = [
         'TenSP', 'MoTa', 'GiaBan', 'GiaGiam', 'SoLuong', 'danhmuc', 'MaTH',
@@ -19,6 +19,7 @@ class SanPham extends Model{
 
     public function images()
     {
-        return $this->hasMany(ImgSP::class, 'MaSP', 'MaSP');
+        return $this->hasMany(ImgSP::class, 'MaSP', 'MaSP'); // Quan hệ với ImgSP
     }
 }
+?>
