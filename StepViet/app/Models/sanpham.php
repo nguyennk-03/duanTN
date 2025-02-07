@@ -10,7 +10,7 @@ class SanPham extends Model
     use HasFactory;
 
     protected $table = 'sanpham';
-    protected $primaryKey = 'MaSP'; // Định nghĩa khóa chính
+    protected $primaryKey = 'MaSP';
     public $timestamps = false; // Nếu không có created_at và updated_at
 
     protected $fillable = [
@@ -19,7 +19,7 @@ class SanPham extends Model
 
     public function images()
     {
-        return $this->hasMany(ImgSP::class, 'MaSP', 'MaSP'); // Quan hệ với ImgSP
+        return $this->hasMany(ImgSP::class, 'MaSP', 'MaSP'); 
     }
 }
 ?>
