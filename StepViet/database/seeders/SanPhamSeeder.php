@@ -28,7 +28,7 @@ class SanPhamSeeder extends Seeder
                 'GiaBan' => $faker->randomFloat(2, 100, 1000), 
                 'GiaGiam' => $faker->boolean() ? $faker->randomFloat(2, 50, 500) : null, 
                 'SoLuong' => $faker->numberBetween(1, 100),  
-                'danhmuc' => $faker->randomElement($danhmucIds),  
+                'MaDM' => $faker->randomElement($danhmucIds),  
                 'MaTH' => $faker->randomElement($thuonghieuIds),  
             ]);
         }

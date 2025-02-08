@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('MaDM');
             $table->string('TenDM')->unique();
             $table->timestamps();
-        });
+        });        
     }
 
     /**

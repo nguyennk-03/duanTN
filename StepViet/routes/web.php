@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SanPhamController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +19,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+ 
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/women', [HomeController::class, 'women'])->name('women');
+Route::get('/men', [HomeController::class, 'men'])->name('men');
+Route::get('/kids', [HomeController::class, 'kids'])->name('kids');
+Route::get('/technologies', [HomeController::class, 'technologies'])->name('technologies');
+Route::get('/sale', [HomeController::class, 'sale'])->name('sale');
+Route::get('/collection', [HomeController::class, 'collection'])->name('collection');
+
+
+
+// Route::get('/about', [AboutController::class, 'about'])->name('about');
+// Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+
+// Route::get('/search', [SanPhamController::class, 'search'])->name('products.search');
+Route::get('/sanpham', [SanPhamController::class, 'index']);
+Route::get('/sanpham/{id}', [SanPhamController::class, 'show']);
+Route::post('/sanpham', [SanPhamController::class, 'store']);
+
+// Route::get('/products/detail/{product_id}', [SanPhamController::class, 'detail'])->name('productsdetail');
+
+// Route::get('/categories/{category_id}', [SanPhamController::class, 'products'])->name('productByCategoryId');
+
+// Route::get('/category', [CategoryController::class, 'list'])->name('category');
+
+// Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+// Route::get('/productadmin', [AdminController::class, 'productadmin'])->name('productadmin');
+// Route::post('/productadd', [AdminController::class, 'productadd'])->name('productadd');
+// Route::get('/productdelete/{id}', [AdminController::class, 'productdelete'])->name('productdelete');
+// Route::get('/productupdateform/{id}', [AdminController::class, 'productupdateform'])->name('productupdateform');
+// Route::put('/productupdate/{id}', [AdminController::class, 'productupdate'])->name('productupdate');
+// Route::get('/users', [AdminController::class, 'users'])->name('users');
+// Route::get('/update', [AdminController::class, 'update'])->name('update');

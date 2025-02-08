@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('thuonghieu', function (Blueprint $table) {
             $table->id('MaTH');
-            $table->string('TenTH');
+            $table->string('TenTH')->unique();
             $table->timestamps();
         });
+        
     }
 
     /**
