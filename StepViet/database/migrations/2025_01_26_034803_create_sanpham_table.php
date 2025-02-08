@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('sanpham', function (Blueprint $table) {
             $table->id('MaSP');
-            $table->string('TenSP', 255);
+            $table->string('TenSP', 255)->nullable(false);;
             $table->string('IMG', 255);
             $table->text('MoTa')->nullable();
             $table->decimal('GiaBan', 10, 2);
