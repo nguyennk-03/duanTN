@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('thuonghieu', function (Blueprint $table) {
-            $table->id('MaTH');
-            $table->string('TenTH')->unique();
+            $table->id('id');
+            $table->string('tenth')->unique();
             $table->timestamps();
         });
         

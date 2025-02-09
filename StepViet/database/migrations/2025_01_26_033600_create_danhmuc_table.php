@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('danhmuc', function (Blueprint $table) {
-            $table->id('MaDM');
-            $table->string('TenDM')->unique();
+            $table->id('id');
+            $table->string('tendm')->unique();
             $table->timestamps();
-        });        
+        });      
     }
 
     /**

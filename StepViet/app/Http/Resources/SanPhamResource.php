@@ -2,25 +2,24 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class SanPhamResource extends JsonResource
 {
-    public function toArray(Request $request): array
+    public function toArray($request)
     {
         return [
-            'id' => $this->MaSP,
-            'name' => $this->TenSP,
-            'image' => $this->IMG,
-            'description' => $this->MoTa,
-            'price' => $this->GiaBan,
-            'discount_price' => $this->GiaGiam,
-            'quantity' => $this->SoLuong,
-            'category' => $this->category->TenDM ?? null,
-            'brand' => $this->brand->TenTH ?? null,
-            'created_at' => $this->created_at->format('Y-m-d H:i:s'),
-            'updated_at' => $this->updated_at->format('Y-m-d H:i:s'),
+            'id' => $this->id,
+            'name' => $this->tensp,
+            'image' => asset('storage/' . $this->img),
+            'description' => $this->mota,
+            'price' => $this->giaban,
+            'discount_price' => $this->giagiam,
+            'quantity' => $this->soluong,
+            'category' => $this->danhmuc_id->tendm ?? null,
+            'brand' => $this->thuonghieu_id->tenth ?? null,
+            'created_at' => $this->created_at->toDateTimeString(),
+            'updated_at' => $this->updated_at->toDateTimeString(),
         ];
     }
 }

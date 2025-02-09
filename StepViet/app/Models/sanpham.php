@@ -1,31 +1,41 @@
 <?php
 
 namespace App\Models;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class SanPham extends Model
 {
     use HasFactory;
+
     protected $table = 'sanpham';
-    protected $primaryKey = 'MaSP';
+    protected $primaryKey = 'id';
     public $timestamps = true;
 
-    protected $fillable = ['TenSP', 'MoTa', 'GiaBan', 'GiaGiam', 'SoLuong', 'MaDM', 'MaTH', 'IMG'];
-
+    protected $fillable = [
+        'tensp',
+        'giaban',
+        'giagiam',
+        'mota',
+        'soluong',
+        'danhmuc_id',
+        'thuonghieu_id',
+        'img'
+    ];
     protected $casts = [
-        'GiaBan' => 'decimal:2',
-        'GiaGiam' => 'decimal:2',
-        'SoLuong' => 'integer',
+        'giaban' => 'decimal:2',
+        'giagiam' => 'decimal:2',
+        'soluong' => 'integer',
     ];
 
     public function danhmuc()
     {
-        return $this->belongsTo(DanhMuc::class, 'MaDM', 'MaDM');
+        return $this->belongsTo(DanhMuc::class, 'danhmuc_id');
     }
 
     public function thuonghieu()
     {
-        return $this->belongsTo(ThuongHieu::class, 'MaTH', 'MaTH');
+        return $this->belongsTo(ThuongHieu::class, 'thuonghieu_id');
     }
 }

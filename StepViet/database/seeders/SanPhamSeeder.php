@@ -16,20 +16,20 @@ class SanPhamSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        // Giả sử bạn có 10 danh mục và 10 thương hiệu
-        $danhmucIds = \App\Models\danhmuc::pluck('MaDM')->toArray();
-        $thuonghieuIds = \App\Models\thuonghieu::pluck('MaTH')->toArray();
+        // faker 10 danh mục và 10 thương hiệu
+        $danhmucIds = \App\Models\DanhMuc::pluck('id')->toArray(); 
+        $thuonghieuIds = \App\Models\ThuongHieu::pluck('id')->toArray(); 
 
         for ($i = 0; $i < 50; $i++) {
             $sanPham = SanPham::create([
-                'TenSP' => $faker->word(),
-                'MoTa' => $faker->text(),
-                'GiaBan' => $faker->randomFloat(2, 100, 1000),
-                'GiaGiam' => $faker->randomFloat(2, 50, 900),
-                'SoLuong' => $faker->numberBetween(1, 100),
-                'MaDM' => rand(1, 5),
-                'MaTH' => rand(1, 5),
-                'IMG' => $faker->imageUrl(),  
+                'tensp' => $faker->word(),
+                'mota' => $faker->text(),
+                'giaban' => $faker->randomFloat(2, 100, 1000),
+                'giagiam' => $faker->randomFloat(2, 50, 900),
+                'soluong' => $faker->numberBetween(1, 100),
+                'danhmuc_id' => $faker->randomElement($danhmucIds), 
+                'thuonghieu_id' => $faker->randomElement($thuonghieuIds), 
+                'img' => $faker->imageUrl(),
             ]);
         }
     }

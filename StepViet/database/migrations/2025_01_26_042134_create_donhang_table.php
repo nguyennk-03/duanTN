@@ -12,15 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('donhang', function (Blueprint $table) {
-            $table->id('MaDH');
-            $table->unsignedBigInteger('MaKH');
-            $table->date('NgayDH');
-            $table->string('TrangThai');
-            $table->string('PhuongThucTT');
-            $table->decimal('TongTien', 10, 2);
-            $table->unsignedBigInteger('MaGG')->nullable();
-            $table->foreign('MaKH')->references('MaKH')->on('khachhang')->onDelete('cascade');
-            $table->foreign('MaGG')->references('MaGG')->on('magiamgia')->onDelete('set null');
+            $table->id('id');
+            $table->foreignId('khachhang_id')->constrained('khachhang')->onDelete('cascade');
+            $table->date('ngaydh');
+            $table->string('trangthai');
+            $table->string('phuongthuctt');
+            $table->decimal('tongtien', 10, 2);
+            $table->foreignId('magiamgia_id')->nullable()->constrained('magiamgia')->onDelete('set null');
             $table->timestamps();
         });
         

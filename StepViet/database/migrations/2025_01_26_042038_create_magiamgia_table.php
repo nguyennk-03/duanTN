@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('magiamgia', function (Blueprint $table) {
-            $table->id('MaGG');
-            $table->string('TenGG');
-            $table->decimal('GiaTri', 10, 2);
-            $table->date('NgayBatDau');
-            $table->date('NgayKetThuc');
+            $table->id('id');
+            $table->string('tengg');
+            $table->decimal('giatri', 10, 2);
+            $table->date('ngaybatdau');
+            $table->date('ngayketthuc');
             $table->timestamps();
         });
         

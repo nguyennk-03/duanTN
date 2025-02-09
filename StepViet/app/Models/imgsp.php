@@ -12,7 +12,7 @@ class imgsp extends Model
     protected $table = 'imgsp';
 
     protected $fillable = [
-        'MaSP',
-        'DuongDan',
+        'sanpham_id',
+        'duongdan',
     ];
 }

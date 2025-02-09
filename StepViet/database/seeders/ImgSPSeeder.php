@@ -24,8 +24,8 @@ class ImgSPSeeder extends Seeder
             $numberOfImages = $faker->numberBetween(1, 3);
             for ($i = 0; $i < $numberOfImages; $i++) {
                 ImgSP::create([
-                    'MaSP' => $sanpham->MaSP, // Liên kết với sản phẩm
-                    'DuongDan' => $faker->imageUrl(640, 480, 'fashion', true), // Đường dẫn ảnh giả
+                    'sanpham_id' => $sanpham->id,  
+                    'duongdan' => $faker->imageUrl(640, 480, 'fashion', true),
                 ]);
             }
         }

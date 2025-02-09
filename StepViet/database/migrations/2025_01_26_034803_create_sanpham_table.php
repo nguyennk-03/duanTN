@@ -12,19 +12,20 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sanpham', function (Blueprint $table) {
-            $table->id('MaSP');
-            $table->string('TenSP', 255)->nullable(false);;
-            $table->string('IMG', 255);
-            $table->text('MoTa')->nullable();
-            $table->decimal('GiaBan', 10, 2);
-            $table->decimal('GiaGiam', 10, 2)->nullable();
-            $table->integer('SoLuong')->default(0);
-            $table->unsignedBigInteger('MaDM');  
-            $table->unsignedBigInteger('MaTH');     
-        
-            $table->foreign('MaDM')->references('MaDM')->on('danhmuc')->onDelete('cascade');
-            $table->foreign('MaTH')->references('MaTH')->on('thuonghieu')->onDelete('cascade');
+            $table->id();
+            $table->string('tensp');
+            $table->text('mota')->nullable();
+            $table->decimal('giaban', 10, 2);
+            $table->decimal('giagiam', 10, 2)->nullable();
+            $table->integer('soluong');
+            $table->unsignedBigInteger('danhmuc_id');
+            $table->unsignedBigInteger('thuonghieu_id');
+            $table->string('sizesp')->nullable();
+            $table->string('img')->nullable();
             $table->timestamps();
+        
+            $table->foreign('danhmuc_id')->references('id')->on('danhmuc')->onDelete('cascade');
+            $table->foreign('thuonghieu_id')->references('id')->on('thuonghieu')->onDelete('cascade');
         });
                 
     }

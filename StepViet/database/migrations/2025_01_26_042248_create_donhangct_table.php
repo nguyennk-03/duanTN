@@ -12,13 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('donhangct', function (Blueprint $table) {
-            $table->unsignedBigInteger('MaDH');
-            $table->unsignedBigInteger('MaSP');
-            $table->integer('SoLuong');
-            $table->decimal('DonGia', 10, 2);
-            $table->foreign('MaDH')->references('MaDH')->on('donhang')->onDelete('cascade');
-            $table->foreign('MaSP')->references('MaSP')->on('sanpham')->onDelete('cascade');
-            $table->primary(['MaDH', 'MaSP']);
+            $table->foreignId('donhang_id')->constrained('donhang')->onDelete('cascade');
+            $table->foreignId('sanpham_id')->constrained('sanpham')->onDelete('cascade');
+            $table->integer('soluong');
+            $table->decimal('dongia', 10, 2);
             $table->timestamps();
         });
     }

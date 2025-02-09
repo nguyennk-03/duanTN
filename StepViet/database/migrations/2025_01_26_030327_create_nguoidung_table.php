@@ -12,16 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('nguoidung', function (Blueprint $table) {
-            $table->id('MaND');
-            $table->string('TenND');
-            $table->string('Email')->unique();
-            $table->string('MatKhau');
-            $table->string('SDT')->nullable();
-            $table->text('DiaChi')->nullable();
-            $table->unsignedBigInteger('MaRole')->nullable();
-            $table->foreign('MaRole')->references('MaRole')->on('role')->onDelete('set null');
+            $table->id('id');
+            $table->string('tennd');
+            $table->string('email')->unique();
+            $table->string('matkhau');
+            $table->string('sdt')->nullable();
+            $table->text('diachi')->nullable();
+            $table->foreignId('role_id')->nullable()->constrained('role')->onDelete('set null');
             $table->timestamps();
         });
+
     }
 
     /**

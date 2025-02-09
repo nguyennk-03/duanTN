@@ -18,7 +18,7 @@ class DanhMucSeeder extends Seeder
         $faker= Faker::create();
         for ($i = 0; $i < 10; $i++) {
             danhmuc::create([
-                'TenDM' => $faker->word(),
+                'tendm' => $faker->unique()->word(),
             ]);
         }
     }

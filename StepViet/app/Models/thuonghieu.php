@@ -8,13 +8,13 @@ class ThuongHieu extends Model
 {
     use HasFactory;
     protected $table = 'thuonghieu';
-    protected $primaryKey = 'MaTH';
+    protected $primaryKey = 'id';
     public $timestamps = true;
 
-    protected $fillable = ['TenTH'];
+    protected $fillable = ['tenth'];
 
     public function sanphams()
     {
-        return $this->hasMany(SanPham::class, 'MaTH', 'MaTH');
+        return $this->hasMany(SanPham::class, 'thuonghieu_id', 'id');
     }
 }

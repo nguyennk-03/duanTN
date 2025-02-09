@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('khachhang', function (Blueprint $table) {
-            $table->id('MaKH');
-            $table->unsignedBigInteger('MaND')->constrained('nguoidung')->onDelete('cascade');
-            $table->dateTime('NgayDangKy');
-            $table->integer('DiemTichLuy')->default(0);
+            $table->id('id');
+            $table->foreignId('nguoidung_id')->constrained('nguoidung')->onDelete('cascade');
+            $table->dateTime('ngaydangky');
+            $table->integer('diemtichluy')->default(0);
             $table->timestamps();
         });
     }

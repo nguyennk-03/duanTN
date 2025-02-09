@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('imgsp', function (Blueprint $table) {
-            $table->id('MaHinh');
-            $table->unsignedBigInteger('MaSP');
-            $table->string('DuongDan', 255);
-            $table->foreign('MaSP')->references('MaSP')->on('sanpham')->onDelete('cascade');
+            $table->id('id');
+            $table->foreignId('sanpham_id')->constrained('sanpham')->onDelete('cascade');
+            $table->string('duongdan', 255);
             $table->timestamps();
         });
+
     }
 
     /**

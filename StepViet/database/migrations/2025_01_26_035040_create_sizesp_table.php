@@ -12,11 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sizesp', function (Blueprint $table) {
-            $table->id('MaSize');
-            $table->unsignedBigInteger('MaSP');
-            $table->string('Size', 10);
-            $table->integer('SoLuong')->default(0);
-            $table->foreign('MaSP')->references('MaSP')->on('sanpham')->onDelete('cascade');   
+            $table->id('id');
+            $table->foreignId('sanpham_id')->constrained('sanpham')->onDelete('cascade');
+            $table->string('size', 10);
+            $table->integer('soluong')->default(0);
             $table->timestamps();
         });
     }
