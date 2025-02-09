@@ -7,18 +7,25 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './components/about/about.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CateDmComponent  } from './components/cate-dm/cate-dm.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    CateDmComponent,
     FooterComponent,
     HomeComponent,
+
     AboutComponent
+ 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
