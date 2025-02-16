@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './components/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CateDmComponent  } from './components/cate-dm/cate-dm.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CateDmComponent  } from './components/cate-dm/cate-dm.component';
     FooterComponent,
     HomeComponent,
 
-    AboutComponent
+    AboutComponent,
+      ProductDetailComponent
  
   ],
   imports: [
