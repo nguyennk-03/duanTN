@@ -1,0 +1,67 @@
+.menu {
+    list-style: none;  /* Bỏ dấu chấm của danh sách */
+    padding: 0;
+    display: flex;
+    gap: 15px; /* Tạo khoảng cách giữa các mục */
+  }
+  
+  .menu li {
+    display: inline-block;
+  }
+  
+  .menu a {
+    text-decoration: none; /* Xóa gạch chân */
+    color: black; /* Màu chữ mặc định */
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    color: red; /* Đổi màu khi di chuột */
+  }
+  /* Định dạng menu */
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+  }
+  
+  .menu li {
+    display: inline-block;
+  }
+  
+  .menu a {
+    text-decoration: none; /* Xóa gạch chân */
+    color: black; /* Màu chữ */
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    color: red; /* Hiệu ứng đổi màu khi hover */
+  }
+  
+  /* Định dạng logo */
+  .menu img {
+    height: 50px; /* Điều chỉnh kích thước logo */
+  }
+  
+  /* Định dạng icon */
+  .icons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+  }
+  
+  .icons span {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .icons span:hover {
+    color: red;
+  }
+  
+  

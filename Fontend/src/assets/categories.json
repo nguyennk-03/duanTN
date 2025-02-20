@@ -1,8 +1,8 @@
 {
     "categories": [
-       { "TenDM": "Điện thoại", "img": "phone.jpg" },
-      { "TenDM": "Máy tính", "img": "laptop.jpg" },
-      { "TenDM": "Thời trang", "img": "fashion.jpg" },
-      { "TenDM": "Thời trang2", "img": "fashion.jpg" }
+       { "TenDM": "Điện thoại", "img": "./assets/images/Boys.png" },
+      { "TenDM": "Máy tính", "img": "./assets/images/Boys.png" },
+      { "TenDM": "Thời trang", "img": "./assets/images/Men.png" },
+      { "TenDM": "Thời trang2", "img": "./assets/images/Girls.png" }
     ]
 }

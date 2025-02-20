@@ -1,0 +1,35 @@
+.shop-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .shop-info i {
+    font-size: 24px;
+    color: #333;
+  }
+  .footer--info{
+    background-color: white;
+    color: black;
+  }
+  .return-policy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .share-icon {
+    width: 30px;
+    height: auto;
+  }
+  .shipping-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .shipping-icon {
+    font-size: 24px;
+    color: #333;
+  }
+  

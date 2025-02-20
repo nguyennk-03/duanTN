@@ -9,8 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './components/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CateDmComponent  } from './components/cate-dm/cate-dm.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -20,10 +20,9 @@ import { LoginComponent } from './components/login/login.component';
     CateDmComponent,
     FooterComponent,
     HomeComponent,
-
+    ProductDetailComponent,
     AboutComponent,
-      ProductDetailComponent,
-      LoginComponent
+     ProductListComponent
  
   ],
   imports: [

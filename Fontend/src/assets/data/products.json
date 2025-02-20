@@ -1,0 +1,193 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Sport Sketch-Lite Pro",
+      "price": 1045000,
+      "oldPrice": 2090000,
+      "image": "assets/images/Boys.png",
+      "colors": 2,
+      "category": "shoes"
+    },
+    {
+      "id": 2,
+      "name": "GOrun Elevate - Double Time",
+      "price": 1045000,
+      "oldPrice": 2090000,
+      "image": "assets/images/Boys.png",
+      "colors": 1,
+      "category": "shoes"
+    },
+    {
+      "id": 3,
+      "name": "GOrun Max Road 6",
+      "price": 1995000,
+      "oldPrice": 3990000,
+      "image": "assets/images/Boys.png",
+      "colors": 1,
+      "category": "shoes"
+    },
+    {
+      "id": 4,
+      "name": "Slip-ins: Ultra Flex 3.0 - Shiny Night",
+      "price": 1195000,
+      "oldPrice": 2390000,
+      "image": "assets/images/Boys.png",
+      "colors": 3,
+      "category": "shoes"
+    },
+    {
+      "id": 5,
+      "name": "Arch Fit Infinity",
+      "price": 1850000,
+      "oldPrice": 3700000,
+      "image": "assets/images/Boys.png",
+      "colors": 2,
+      "category": "shoes"
+    },
+    {
+      "id": 6,
+      "name": "Go Walk 6 - Effortless",
+      "price": 1250000,
+      "oldPrice": 2500000,
+      "image": "assets/images/Boys.png",
+      "colors": 2,
+      "category": "shoes"
+    },
+    {
+      "id": 7,
+      "name": "D'Lux Walker - Fresh Step",
+      "price": 1450000,
+      "oldPrice": 2900000,
+      "image": "assets/images/Boys.png",
+      "colors": 1,
+      "category": "shoes"
+    },
+    {
+      "id": 8,
+      "name": "Max Cushioning Elite",
+      "price": 2095000,
+      "oldPrice": 4190000,
+      "image": "assets/images/Boys.png",
+      "colors": 1,
+      "category": "shoes"
+    },
+    {
+      "id": 9,
+      "name": "Summits - Quick Getaway",
+      "price": 990000,
+      "oldPrice": 1980000,
+      "image": "assets/images/Boys.png",
+      "colors": 2,
+      "category": "shoes"
+    },
+    {
+      "id": 10,
+      "name": "Ultra Flex 2.0 - Lite Groove",
+      "price": 1350000,
+      "oldPrice": 2700000,
+    "image": "assets/images/Boys.png",
+      "colors": 2,
+      "category": "shoes"
+    },
+    {
+      "id": 11,
+      "name": "Dynamight 2.0 - Eye Catcher",
+      "price": 1100000,
+      "oldPrice": 2200000,
+      "image": "assets/images/Boys.png",
+      "colors": 1,
+      "category": "shoes"
+    },
+    {
+      "id": 12,
+      "name": "Flex Appeal 4.0 - Brilliant View",
+      "price": 1550000,
+      "oldPrice": 3100000,
+     "image": "assets/images/Boys.png",
+      "colors": 2,
+      "category": "shoes"
+    },
+    {
+      "id": 13,
+      "name": "Skechers Street Uno - Stand on Air",
+      "price": 1750000,
+      "oldPrice": 3500000,
+     "image": "assets/images/Boys.png",
+      "colors": 3,
+      "category": "shoes"
+    },
+    {
+      "id": 14,
+      "name": "Go Walk Arch Fit - Rejoice",
+      "price": 1650000,
+      "oldPrice": 3300000,
+     "image": "assets/images/Boys.png",
+      "colors": 2,
+      "category": "shoes"
+    },
+    {
+      "id": 15,
+      "name": "Go Run Ride 9",
+      "price": 1895000,
+      "oldPrice": 3790000,
+     "image": "assets/images/Boys.png",
+      "colors": 2,
+      "category": "shoes"
+    },
+    {
+      "id": 16,
+      "name": "Max Cushioning Delta",
+      "price": 1950000,
+      "oldPrice": 3900000,
+      "image": "assets/images/Boys.png",
+      "colors": 2,
+      "category": "shoes"
+    },
+    {
+      "id": 17,
+      "name": "Slip-ins: Ultra Flex 2.0",
+      "price": 1295000,
+      "oldPrice": 2590000,
+      "image": "assets/images/Boys.png",
+      "colors": 1,
+      "category": "shoes"
+    },
+    {
+      "id": 18,
+      "name": "Arch Fit 2.0 - Big League",
+      "price": 1495000,
+      "oldPrice": 2990000,
+     "image": "assets/images/Boys.png",
+      "colors": 2,
+      "category": "shoes"
+    },
+    {
+      "id": 19,
+      "name": "D'Lites - Me Time",
+      "price": 1350000,
+      "oldPrice": 2700000,
+     "image": "assets/images/Boys.png",
+      "colors": 2,
+      "category": "shoes"
+    },
+    {
+      "id": 20,
+      "name": "Skechers Arch Fit - Infinity Cool",
+      "price": 1600000,
+      "oldPrice": 3200000,
+     "image": "assets/images/Boys.png",
+      "colors": 3,
+      "category": "shoes"
+    },
+    {"id":"1",
+    "name":"Non harum",
+    "slug":"non-harum-eSbec",
+    "description":"Facilis magnam voluptas aut quam fuga quae expedita quis quaerat.",
+    "price":"390.84","category_id":"1","brand_id":"1","created_at":"2025-02-16 08:34:39",
+    "updated_at":"2025-02-16 08:34:39",
+  "category": "shoes"}
+    
+
+  ]
+}

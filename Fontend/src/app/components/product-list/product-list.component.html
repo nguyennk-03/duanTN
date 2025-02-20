@@ -1,0 +1,41 @@
+<main>
+    <aside class="sidebar">
+      <h3>GIÁ</h3>
+      <input type="range" min="0" max="2990000">
+      
+      <h3>GENDER</h3>
+      <label><input type="checkbox"> WOMEN</label>
+      <label><input type="checkbox"> MEN</label>
+  
+      <h3>TYPE</h3>
+      <label><input type="checkbox"> LIFESTYLE</label>
+      <label><input type="checkbox"> PERFORMANCE</label>
+  
+      <h3>CATEGORY</h3>
+      <label><input type="checkbox"> TOPS</label>
+      <label><input type="checkbox"> BOTTOMS</label>
+      <label><input type="checkbox"> SANDALS</label>
+      <label><input type="checkbox"> SHOES</label>
+  
+      <h3>SIZE</h3>
+      <div class="size-options">
+        <span>US:5</span> <span>US:6</span> <span>US:7</span> 
+        <span>US:8</span> <span>US:9</span> <span>US:10</span> 
+        <span>S</span> <span>M</span> <span>L</span>
+      </div>
+    </aside>
+  
+    <section class="product-list">
+      <h2>NỮ</h2>
+      <div class="products">
+        <div class="product" *ngFor="let product of products">
+          <img [src]="product.image" [alt]="product.name">
+          <p>GIÀY THỂ THAO NỮ</p>
+          <p class="price">
+            <span class="discount">{{ product.price | currency:'VND' }}</span>
+            <span class="original" *ngIf="product.oldPrice">{{ product.oldPrice | currency:'VND' }}</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>

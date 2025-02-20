@@ -162,51 +162,91 @@ header {
 }
 
 /* Footer Styles */
-footer {
-
-  color: black;
-  padding: 2rem;
-  text-align: center;
-}
-
-.footer-info {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-.thongtin {
-  display: flex;
-}
-
-.footer-info div {
-  max-width: 200px;
-  font-size: 0.9rem;
-}
-
-.footer-links {
-  font-size: 0.9rem;
-  color: #ccc;
-}
-
-.footer-links p:hover {
-  color: #ff5722;
-  cursor: pointer;
-}
-.thongtin {
-  display: flex; /* Sắp xếp các cột thành một hàng */
-  justify-content: space-between; /* Căn các cột đều nhau */
-  background-color: grey; /* Màu nền xám cho toàn bộ section */
-  padding: 20px; /* Khoảng cách xung quanh nội dung */
-}
-
-.thongtin .column {
-  width: 25%; /* Mỗi cột chiếm 25% chiều rộng */
-  padding: 10px; /* Khoảng cách bên trong cột */
-  /* Đường viền xung quanh cột */
-}
-
-.thongtin .grey-column {
-  background-color: #ccc; /* Màu xám đậm hơn cho cột "Thông tin" */
-}
+/* Định dạng chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+  
+  /* Footer Info */
+  Định dạng chung
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+    
+    
+    /* Footer Info */
+    .footer--info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #8d7474;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .footer-info div {
+      flex: 1;
+      padding: 10px;
+    }
+    
+    .footer-info p {
+      margin: 5px 0;
+    }
+    
+    /* Section Thông tin */
+    #thongtin {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 40px 20px;
+    }
+    
+    .column {
+      flex: 1;
+      min-width: 200px; /* Đảm bảo không bị vỡ layout trên màn hình nhỏ */
+      padding: 10px;
+    }
+    
+    .column h2 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .column ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .column ul li {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 5px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .footer-info {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      #thongtin {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .column {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    

@@ -2,16 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
 })
-export class HomeComponent implements OnInit {
+export class ProductListComponent implements OnInit {
   products: any[] = [];
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.loadProducts();
   }
 
