@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CateDmComponent  } from './components/cate-dm/cate-dm.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { AuthModule } from './auth/auth.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,13 +25,17 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     HomeComponent,
     ProductDetailComponent,
     AboutComponent,
-     ProductListComponent
- 
+    ProductListComponent,
+
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule 
+    HttpClientModule,
+    AuthModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

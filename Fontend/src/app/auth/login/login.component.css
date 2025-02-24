@@ -1,0 +1,186 @@
+/* Reset CSS */
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Nền trang */
+body {
+  background-color: #eeedec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Hộp đăng nhập */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-box {
+  background-color: #2a2a3c;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.logo h2 {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logo .highlight {
+  color: #ff5b3d;
+}
+
+/* Phụ đề */
+.subtitle {
+  color: #b0b3c2;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Tiêu đề SIGN IN */
+.sign-in-title {
+  margin-top: 15px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Ô nhập liệu */
+.form-group {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.form-group label {
+  color: #b0b3c2;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #44475a;
+  border-radius: 5px;
+  background-color: #2d2d3d;
+  color: white;
+}
+
+/* Remember me */
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: #b0b3c2;
+  font-size: 14px;
+}
+
+.remember-me input {
+  margin-right: 5px;
+}
+
+/* Nút đăng nhập */
+.login-btn {
+  width: 100%;
+  background-color: #ff5b3d;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #e04e30;
+}
+
+/* Sign in with */
+.signin-with {
+  color: #b0b3c2;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+
+/* Biểu tượng mạng xã hội */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Căn giữa các icon theo chiều ngang */
+  gap: 10px; /* Khoảng cách giữa các icon */
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center; /* Căn giữa icon theo chiều dọc */
+  justify-content: center; /* Căn giữa icon theo chiều ngang */
+  background-color: #3a3b46;
+  color: rgb(195, 167, 167);
+  font-size: 20px; /* Điều chỉnh kích thước icon */
+  width: 45px; /* Kích thước vòng tròn */
+  height: 45px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.social-icons a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hiệu ứng hover */
+.social-icons a:hover {
+  background-color: #ff5b3d;
+  color: white; /* Thay đổi màu icon khi hover */
+  transform: scale(1.1); /* Phóng to nhẹ khi hover */
+}
+
+
+/* Liên kết phụ */
+.extra-links {
+  margin-top: 20px;
+}
+
+.extra-links a {
+  color: #b0b3c2;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.extra-links a:hover {
+  color: #ff5b3d;
+}
+
+.signup-link {
+  color: #ff5b3d;
+  font-weight: bold;
+}
+
+.signup-link:hover {
+  color: #e04e30;
+}
+.colored-text {
+  color: #f29b8b;
+}

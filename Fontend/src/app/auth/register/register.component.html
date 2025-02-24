@@ -1,0 +1,107 @@
+<body class="authentication-bg authentication-bg-pattern">
+
+  <div class="account-pages mt-5 mb-5">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-md-8 col-lg-6 col-xl-5">
+                  <div class="card">
+
+                      <div class="card-body p-4">
+
+                          <div class="text-center w-75 m-auto">
+                              <a href="index.html">
+                                  <span><img src="../../../assets/images/logo.jpg" alt="" height="60"></span>
+                              </a>
+                              <p class="text-muted mb-4 mt-3">Bạn chưa có tài khoản? Hãy tạo tài khoản miễn phí ngay bây giờ.</p>
+                          </div>
+
+                          <h5 class="auth-title">Tạo tài khoản</h5>
+
+                          <form (ngSubmit)="onSubmit()">
+
+                              <div class="form-group">
+                                  <label for="fullname">Họ và tên đầy đủ</label>
+                                  <input class="form-control" type="text" id="fullname" [(ngModel)]="username" name="fullname" placeholder="Nhập tên của bạn" required="">
+                                  <div *ngIf="username==''">
+                                    <small class="text-danger">Tên đăng kký không được bỏ trống</small>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="emailaddress">Địa chỉ email</label>
+                                  <input class="form-control" type="email" id="emailaddress" [(ngModel)]="email" name="email" required="" placeholder="Nhập email của bạn">
+                                  <div *ngIf="email==''">
+                                    <small class="text-danger">Email đăng ký không được bỏ trống</small>
+                                  </div>
+                                  <div *ngIf="email!=='' && ! isEmailValid(email)">
+                                    <small class="text-danger">Email không hợp lệ</small>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="password">Mật khẩu</label>
+                                  <input class="form-control" type="password" id="password" [(ngModel)]="password" name="password" required="" placeholder="Nhập mật khẩu của bạn">
+                                  <div *ngIf="password==''">
+                                    <small class="text-danger">Mật khẩu đăng ký không được bỏ trống</small>
+                                  </div>
+                                  <div *ngIf="password!=='' && ! isPasswordValid(password)">
+                                    <small class="text-danger">Mật khẩu phải có 8 ký tự gồm chữ hoa, chữ thường, số và ký tự đặt biệt</small>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="repassword">Nhập Lại Mật khẩu</label>
+                                <input class="form-control" type="password" id="repassword" [(ngModel)]="repassword" name="repassword" required="" placeholder="Nhập mật khẩu của bạn">
+                                <div *ngIf="repassword==''">
+                                  <small class="text-danger">Mật khẩu nhập lại không được bỏ trống</small>
+                                </div>
+                                <div *ngIf="repassword!=='' && password!==repassword">
+                                  <small class="text-danger">Mật khẩu nhập lại không khớp</small>
+                                </div>
+                            </div>
+                              <div class="form-group">
+                                  <div class="custom-control custom-checkbox checkbox-info">
+                                      <input type="checkbox" class="custom-control-input" id="checkbox-signup">
+                                      <label class="custom-control-label" for="checkbox-signup">Tôi chấp nhận <a href="javascript: void(0);" class="text-dark">Điều khoản và Điều kiện</a></label>
+                                  </div>
+                              </div>
+                              <div class="form-group mb-0 text-center">
+                                  <button class="btn btn-danger btn-block" type="submit"> Đăng Ký </button>
+                              </div>
+
+                          </form>
+
+                          <div class="text-center">
+                              <h5 class="mt-3 text-muted">Đăng ký sử dụng</h5>
+                              <ul class="social-list list-inline mt-3 mb-0">
+                                  <li class="list-inline-item">
+                                      <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i class="fab fa-facebook"></i></a>
+                                  </li>
+                                  <li class="list-inline-item">
+                                      <a href="javascript: void(0);" class="social-list-item border-danger text-danger"><i class="fa-brands fa-google"></i></a>
+                                  </li>
+                                  <li class="list-inline-item">
+                                      <a href="javascript: void(0);" class="social-list-item border-info text-info"><i class="fa-brands fa-twitter"></i></a>
+                                  </li>
+                                  <li class="list-inline-item">
+                                      <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary"><i class="fab fa-instagram"></i></a>
+                                  </li>
+                              </ul>
+                          </div>
+
+                      </div> <!-- end card-body -->
+                  </div>
+                  <!-- end card -->
+
+                  <div class="row mt-3">
+                      <div class="col-12 text-center">
+                          <p class="text-muted">Đã có tài khoản?  <a routerLink="/login" class="text-muted ml-1"><b class="font-weight-semibold">Đăng nhập</b></a></p>
+                      </div> <!-- end col -->
+                  </div>
+                  <!-- end row -->
+
+              </div> <!-- end col -->
+          </div>
+          <!-- end row -->
+      </div>
+      <!-- end container -->
+  </div>
+  <!-- end page -->
+</body>
