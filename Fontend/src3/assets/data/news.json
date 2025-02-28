@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "SẮP RA MẮT: BỘ SƯU TẬP THU ĐÔNG 2024",
+    "content": "Bộ sưu tập mới mang phong cách hiện đại, kết hợp với xu hướng mùa thu đông.",
+    "image": "assets/images/Banner1.png"
+  },
+  {
+    "id": 2,
+    "title": "4 món đồ họa tiết đáng sắm để phong cách trẻ trung hơn",
+    "content": "Thời trang mùa lạnh không nên chỉ giới hạn với những món đồ trơn màu...",
+    "image": "assets/images/Banner1.png"
+  },
+  {
+    "id": 3,
+    "title": "Mẹo phối đồ mùa đông cực chất",
+    "content": "Kết hợp áo len với áo khoác dài giúp bạn giữ ấm và vẫn giữ được phong cách cá tính.",
+    "image": "assets/images/Banner1.png"
+  },
+  {
+    "id": 4,
+    "title": "Những mẫu giày hot trend mùa đông năm nay",
+    "content": "Những mẫu giày boots và sneaker hot nhất giúp bạn nổi bật trong mùa đông này.",
+    "image": "assets/images/Banner1.png"
+  }
+]

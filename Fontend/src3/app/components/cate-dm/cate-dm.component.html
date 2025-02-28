@@ -1,0 +1,14 @@
+<div class="container">
+  
+  
+  <section class="shop-section">
+    <div class="shop-item" *ngFor="let category of categories">
+       <img [src]="category.img" [alt]="category.TenDM">
+       <p>{{ category.TenDM }} &gt;&gt;</p>
+    </div>
+   </section>
+   <ng-template #noData>
+     <p>Không có danh mục sản phẩm nào.</p>
+  </ng-template>
+   <p class="share-style">CHIA SẺ STYLE CỦA BẠN <span>&#64;STEPVIET</span></p>
+ </div>

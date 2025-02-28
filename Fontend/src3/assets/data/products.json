@@ -1,0 +1,224 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Giày Thể Thao Nữ",
+      "price": 1200000,
+      "oldPrice": 1500000,
+      "gender": "women",
+      "type": "lifestyle",
+      "category": "shoes",
+      "sizes": ["US:5", "US:6", "US:7"],
+      "image": "assets/images/banner1.png"
+    },
+    {
+      "id": 2,
+      "name": "Áo Thun Nam",
+      "price": 500000,
+      "oldPrice": 700000,
+      "gender": "men",
+      "type": "performance",
+      "category": "tops",
+      "sizes": ["S", "M", "L"],
+      "image": "assets/images/banner1.png"
+    },
+    {
+      "id": 3,
+      "name": "Quần Jogger Unisex",
+      "price": 900000,
+      "oldPrice": 1100000,
+      "gender": "unisex",
+      "type": "lifestyle",
+      "category": "bottoms",
+      "sizes": ["US:8", "US:9", "US:10"],
+      "image": "assets/images/banner1.png"
+    },
+    {
+      "id": 4,
+      "name": "Dép Nữ",
+      "price": 300000,
+      "oldPrice": null,
+      "gender": "women",
+      "type": "lifestyle",
+      "category": "sandals",
+      "sizes": ["US:5", "US:6", "US:7"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 5,
+      "name": "Giày Chạy Bộ Nam",
+      "price": 1800000,
+      "oldPrice": 2200000,
+      "gender": "men",
+      "type": "performance",
+      "category": "shoes",
+      "sizes": ["US:7", "US:8", "US:9"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 6,
+      "name": "Áo Hoodie Unisex",
+      "price": 750000,
+      "oldPrice": 950000,
+      "gender": "unisex",
+      "type": "lifestyle",
+      "category": "tops",
+      "sizes": ["S", "M", "L"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 7,
+      "name": "Quần Short Nam",
+      "price": 400000,
+      "oldPrice": 550000,
+      "gender": "men",
+      "type": "performance",
+      "category": "bottoms",
+      "sizes": ["M", "L"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 8,
+      "name": "Giày Sneakers Unisex",
+      "price": 1300000,
+      "oldPrice": 1700000,
+      "gender": "unisex",
+      "type": "lifestyle",
+      "category": "shoes",
+      "sizes": ["US:6", "US:7", "US:8", "US:9"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 9,
+      "name": "Dép Nam",
+      "price": 250000,
+      "oldPrice": 350000,
+      "gender": "men",
+      "type": "lifestyle",
+      "category": "sandals",
+      "sizes": ["US:7", "US:8", "US:9"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 10,
+      "name": "Giày Thể Thao Cao Cấp",
+      "price": 2100000,
+      "oldPrice": 2500000,
+      "gender": "women",
+      "type": "performance",
+      "category": "shoes",
+      "sizes": ["US:5", "US:6", "US:7"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 11,
+      "name": "Áo Polo Nam",
+      "price": 600000,
+      "oldPrice": 800000,
+      "gender": "men",
+      "type": "lifestyle",
+      "category": "tops",
+      "sizes": ["M", "L", "XL"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 12,
+      "name": "Balo Thể Thao",
+      "price": 950000,
+      "oldPrice": null,
+      "gender": "unisex",
+      "type": "accessory",
+      "category": "bags",
+      "sizes": [],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 13,
+      "name": "Áo Dài Tay Nữ",
+      "price": 700000,
+      "oldPrice": 900000,
+      "gender": "women",
+      "type": "performance",
+      "category": "tops",
+      "sizes": ["S", "M", "L"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 14,
+      "name": "Quần Legging Nữ",
+      "price": 850000,
+      "oldPrice": 1000000,
+      "gender": "women",
+      "type": "lifestyle",
+      "category": "bottoms",
+      "sizes": ["S", "M", "L"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 15,
+      "name": "Dép Nam Cao Cấp",
+      "price": 400000,
+      "oldPrice": 600000,
+      "gender": "men",
+      "type": "lifestyle",
+      "category": "sandals",
+      "sizes": ["US:8", "US:9", "US:10"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 16,
+      "name": "Áo Khoác Gió Nam",
+      "price": 1200000,
+      "oldPrice": 1500000,
+      "gender": "men",
+      "type": "performance",
+      "category": "tops",
+      "sizes": ["M", "L", "XL"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 17,
+      "name": "Quần Jeans Unisex",
+      "price": 950000,
+      "oldPrice": 1200000,
+      "gender": "unisex",
+      "type": "lifestyle",
+      "category": "bottoms",
+      "sizes": ["M", "L", "XL"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 18,
+      "name": "Dép Lê Nữ",
+      "price": 320000,
+      "oldPrice": null,
+      "gender": "women",
+      "type": "lifestyle",
+      "category": "sandals",
+      "sizes": ["US:6", "US:7", "US:8"],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 19,
+      "name": "Túi Đeo Chéo",
+      "price": 700000,
+      "oldPrice": 900000,
+      "gender": "unisex",
+      "type": "accessory",
+      "category": "bags",
+      "sizes": [],
+      "image": "assets/images/Boys.png"
+    },
+    {
+      "id": 20,
+      "name": "Giày Thể Thao Unisex",
+      "price": 1600000,
+      "oldPrice": 2000000,
+      "gender": "unisex",
+      "type": "performance",
+      "category": "shoes",
+      "sizes": ["US:7", "US:8", "US:9"],
+      "image": "assets/images/Boys.png"
+    }
+  ]
+}

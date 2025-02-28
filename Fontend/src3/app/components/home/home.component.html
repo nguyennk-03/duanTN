@@ -1,0 +1,343 @@
+<main>
+  <article>
+    <section class="container-fluid p-0 position-relative">
+      <div class="row">
+        <div class="col-12">
+          <img src="assets/img/hero-banner.png" alt="Skechers The Uno" class="img-fluid w-100">
+          <div class="position-absolute top-50 start-0 translate-middle-y ms-5 text-white" style="width: 50%;">
+            <h2 class="h1 hero-title mb-3 text-black">
+              Bộ Sưu Tập <strong>Giày Mùa Hè Mới</strong>
+            </h2>
+            <p class="hero-text mb-3 text-black">
+              Đẩy nhanh các lợi ích thay thế một cách có năng lực trong khi vẫn là chất xúc tác tiên tiến cho sự thay
+              đổi. Tận dụng toàn cầu một loạt các nhà lãnh đạo mở rộng hiện có.
+            </p>
+            <button class="btn  btn-lg">
+              <a href="#" class="btn btn-danger btn-lg px-4 d-inline-flex align-items-center">
+                Mua Ngay <i class="fas fa-arrow-right ms-2"></i>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section collection py-5">
+      <div class="container">
+        <h2 class="h2 text-center mb-4 fw-bold">Bộ Sưu Tập</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+          <!-- Lặp danh mục bằng *ngFor -->
+          <div class="col" *ngFor="let category of categories">
+            <div class="collection-card text-center p-4 d-flex flex-column align-items-center justify-content-between"
+              [ngStyle]="{'background-color': category.bgColor}">
+
+              <h3 class="h5 fw-bold text-uppercase">{{ category.name }}</h3>
+
+              <div class="image-container">
+                <img [src]=" './assets/img/collection-3.jpg' " class="img-fluid"
+                  alt="{{ category.name }}">
+              </div>
+              <button class="btn explore-btn mt-3">
+                <a href="#" class="btn btn-danger btn-lg px-2 d-inline-flex align-items-center">
+                  Xem Ngay <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- <section class="section product py-5">
+      <div class="container">
+        <h2 class="h2 section-title text-center mb-4">Sản Phẩm Bán Chạy</h2>
+        <ul class="nav nav-pills justify-content-center mb-4">
+          <li class="nav-item">
+            <button class="nav-link active filter-btn" data-filter="all">Tất Cả</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link filter-btn" data-filter="nike">Nike</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link filter-btn" data-filter="adidas">Adidas</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link filter-btn" data-filter="puma">Puma</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link filter-btn" data-filter="bata">Bata</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link filter-btn" data-filter="apex">Apex</button>
+          </li>
+        </ul>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 product-list ">
+          <li class="product-item col" data-filter="nike" *ngFor="let product of products">
+            <div class="product-card h-100 position-relative" tabindex="0">
+              <figure class="card-banner position-relative">
+                <img [src]="product.image" class="img-fluid" alt="Running Sneaker Shoes">
+
+
+                <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded m-2">
+                  New
+                </div>
+
+
+                <ul class="position-absolute top-50 end-0 translate-middle-y d-flex flex-column gap-2 me-2">
+                  <li>
+                    <button class="btn btn-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+                      aria-label="Add to Cart">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+                      aria-label="Add to Wishlist">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+                      aria-label="Quick View">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+                      aria-label="Compare">
+                      <i class="fas fa-exchange-alt"></i>
+                    </button>
+                  </li>
+                </ul>
+              </figure>
+
+              <div class="card-content p-3">
+                <div class="card-cat">
+                  <a href="#" class="text-decoration-none text-muted">Men</a> /
+                  <a href="#" class="text-decoration-none text-muted">Women</a>
+                </div>
+                <h3 class="h5 card-title">
+                  <a href="#" class="text-dark text-decoration-none">{{ product.name }}</a>
+                </h3>
+                <data class="card-price text-danger fw-bold" value="180.85">{{ product.price | number }} đ</data>
+              </div>
+            </div>
+
+          </li>
+
+        </div>
+      </div>
+    </section> -->
+
+    <section class="section product py-5">
+      <div class="container">
+        <h2 class="h2 section-title text-center mb-4 fw-bold">Sản Phẩm Bán Chạy Nhất</h2>
+        <ul class="nav nav-pills justify-content-center mb-4">
+          <li class="nav-item">
+            <button class="nav-link active filter-btn" data-filter="all">Tất Cả</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link filter-btn" data-filter="nike">Nike</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link filter-btn" data-filter="adidas">Adidas</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link filter-btn" data-filter="puma">Puma</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link filter-btn" data-filter="bata">Bata</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link filter-btn" data-filter="apex">Apex</button>
+          </li>
+        </ul>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 product-list">
+          <div class="col product-item" *ngFor="let product of products">
+            <div class="product-card card border-0 shadow-sm p-3 rounded-4 position-relative h-100">
+              <figure class="card-banner position-relative text-center h-80">
+                <img [src]="product.image" class="img-fluid h-30"
+                  alt="{{ product.name }}">
+                <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded m-2 small">Mới</div>
+                <!-- <ul class="position-absolute top-50 end-0 translate-middle-y d-flex flex-column gap-2 me-2">
+                  <li>
+                    <button class="btn btn-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+                      aria-label="Add to Cart">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+                      aria-label="Add to Wishlist">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+                      aria-label="Quick View">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+                      aria-label="Compare">
+                      <i class="fas fa-exchange-alt"></i>
+                    </button>
+                  </li>
+                </ul> -->
+              </figure>
+              <div class="card-content text-center mt-3">
+                <p class="card-cat text-muted small">{{ product.category }}</p>
+                <h3 class="h6 fw-bold">{{ product.name }}</h3>
+                <data class="card-price text-danger fw-bold" value="{{ product.price }}">{{ product.price | number }}
+                  VNĐ</data>
+                <del *ngIf="product.oldPrice" class="text-muted ms-2">{{ product.oldPrice | number }} VNĐ</del>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <section class="section cta py-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="cta-card h-100 p-5 text-white"
+              style="background-image: url('./assets/img/cta-1.jpg'); background-size: cover; background-position: center;">
+              <p class="card-subtitle mb-2">Giày Adidas</p>
+              <h3 class="h2 card-title mb-3">Khuyến mại mùa hè giảm giá 50%</h3>
+              <button class="btn btn-link text-white">
+                <a href="#" class="btn btn-danger btn-lg px-3 d-inline-flex align-items-center">
+                  Mua Ngay <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cta-card h-100 p-5 text-white"
+              style="background-image: url('./assets/img/cta-2.jpg'); background-size: cover; background-position: center;">
+              <p class="card-subtitle mb-2">Giày Nike</p>
+              <h3 class="h2 card-title mb-3">Giúp bạn luôn thể thao</h3>
+              <button class="btn btn-link text-white">
+                <a href="#" class="btn btn-danger btn-lg px-3 d-inline-flex align-items-center">
+                  Mua Ngay <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product py-5">
+      <div class="container">
+        <h2 class="h2 section-title text-center mb-4 fw-bold">Sản Phẩm Mới</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 product-list">
+          <div class="col product-item" *ngFor="let product of products.slice(0, 4)">
+            <div class="product-card card border-0 shadow-sm p-3 rounded-4 position-relative">
+              <figure class="card-banner position-relative text-center">
+                <img [src]="product.image || './assets/img/collection-2.jpg'" class="img-fluid"
+                  alt="{{ product.name }}">
+                <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded m-2 small">Mới</div>
+                <!-- <ul class="position-absolute top-50 end-0 translate-middle-y d-flex flex-column gap-2 me-2">
+                  <li>
+                    <button class="btn btn-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+                      aria-label="Add to Cart">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+                      aria-label="Add to Wishlist">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+                      aria-label="Quick View">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+                      aria-label="Compare">
+                      <i class="fas fa-exchange-alt"></i>
+                    </button>
+                  </li>
+                </ul> -->
+              </figure>
+              <div class="card-content text-center mt-3">
+                <p class="card-cat text-muted small">{{ product.category }}</p>
+                <h3 class="h6 fw-bold">{{ product.name }}</h3>
+                <data class="card-price text-danger fw-bold" value="{{ product.price }}">{{ product.price | number }}
+                  VNĐ</data>
+                <del *ngIf="product.oldPrice" class="text-muted ms-2">{{ product.oldPrice | number }} VNĐ</del>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section insta-post container">
+      <ul class="insta-post-list d-flex flex-wrap list-unstyled">
+        <li class="insta-post-item p-2 col-3">
+          <img src="./assets/img/insta-1.jpg" class="img-fluid" alt="Instagram post">
+          <a href="#" class="insta-post-link position-absolute top-50 start-50 translate-middle">
+            <i class="bi bi-instagram fs-3"></i>
+          </a>
+        </li>
+        <li class="insta-post-item p-2 col-3">
+          <img src="./assets/img/insta-2.jpg" class="img-fluid" alt="Instagram post">
+          <a href="#" class="insta-post-link position-absolute top-50 start-50 translate-middle">
+            <i class="bi bi-instagram fs-3"></i>
+          </a>
+        </li>
+        <li class="insta-post-item p-2 col-3">
+          <img src="./assets/img/insta-3.jpg" class="img-fluid" alt="Instagram post">
+          <a href="#" class="insta-post-link position-absolute top-50 start-50 translate-middle">
+            <i class="bi bi-instagram fs-3"></i>
+          </a>
+        </li>
+        <li class="insta-post-item p-2 col-3">
+          <img src="./assets/img/insta-4.jpg" class="img-fluid" alt="Instagram post">
+          <a href="#" class="insta-post-link position-absolute top-50 start-50 translate-middle">
+            <i class="bi bi-instagram fs-3"></i>
+          </a>
+        </li>
+        <li class="insta-post-item p-2 col-3">
+          <img src="./assets/img/insta-5.jpg" class="img-fluid" alt="Instagram post">
+          <a href="#" class="insta-post-link position-absolute top-50 start-50 translate-middle">
+            <i class="bi bi-instagram fs-3"></i>
+          </a>
+        </li>
+        <li class="insta-post-item p-2 col-3">
+          <img src="./assets/img/insta-6.jpg" class="img-fluid" alt="Instagram post">
+          <a href="#" class="insta-post-link position-absolute top-50 start-50 translate-middle">
+            <i class="bi bi-instagram fs-3"></i>
+          </a>
+        </li>
+        <li class="insta-post-item p-2 col-3">
+          <img src="./assets/img/insta-7.jpg" class="img-fluid" alt="Instagram post">
+          <a href="#" class="insta-post-link position-absolute top-50 start-50 translate-middle">
+            <i class="bi bi-instagram fs-3"></i>
+          </a>
+        </li>
+        <li class="insta-post-item p-2 col-3">
+          <img src="./assets/img/insta-8.jpg" class="img-fluid" alt="Instagram post">
+          <a href="#" class="insta-post-link position-absolute top-50 start-50 translate-middle">
+            <i class="bi bi-instagram fs-3"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </article>
+</main>
